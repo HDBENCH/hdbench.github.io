@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motroxia - Real-time OBD2 car monitor | HDBENCH.NET</title>
+<meta name="description" content="Motroxia turns your iPhone or Android phone into a live car dashboard using an ELM327-compatible OBD2 adapter.">
+<meta property="og:title" content="Motroxia">
+<meta property="og:description" content="Real-time OBD2 car monitor for iPhone and Android.">
+<meta property="og:url" content="https://hdbench.github.io/motroxia/">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  /* Motroxia の配色。アプリのアイコンと同じ黒地に #00FF88 */
+  :root { --app-hero-bg: #000000; --app-accent: #00ff88; --app-accent-ink: #000000; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../">HDBENCH.NET</a>
+    <nav class="site-nav">
+      <a href="#requirements">Requirements</a>
+      <a href="#support">Support</a>
+      <a href="#contact">Contact</a>
+      <a href="https://hdbench.github.io/motroxia-privacy/">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="card-head">
+      <img src="icon.svg" alt="Motroxia app icon" width="72" height="72">
+      <div>
+        <h1>Motroxia</h1>
+        <p class="tagline">Real-time OBD2 car monitor</p>
+      </div>
+    </div>
+    <div class="bi">
+      <p>Turn your phone into a live car dashboard. Plug an ELM327-compatible OBD2 adapter into your car and watch engine data on gauges you arrange yourself.</p>
+      <p lang="ja">スマートフォンを車のリアルタイムメーターに。ELM327 互換の OBD2 アダプタを車に挿し、エンジンのデータを自分で配置したメーターで表示します。</p>
+    </div>
+    <div class="links">
+      <a class="btn primary" href="https://apps.apple.com/app/motroxia/id6803079954">App Store</a>
+      <a class="btn primary" href="https://play.google.com/store/apps/details?id=net.hdbench.motroxia">Google Play</a>
+    </div>
+  </section>
+
+  <h2 id="features">Features <span class="muted" lang="ja">/ 主な機能</span></h2>
+  <div class="bi">
+    <ul class="plain">
+      <li>Live gauges for RPM, speed, coolant temperature, battery voltage, boost pressure and more</li>
+      <li>Multiple meter pages. Add widgets and set each one's data, style, colors and range</li>
+      <li>ECU info: which standard OBD-II PIDs your car supports, and its communication speed</li>
+      <li>Custom PIDs: create your own values with formulas based on raw PID data</li>
+      <li>Metric, imperial or custom units</li>
+      <li>Demo Mode to try every feature without an adapter</li>
+      <li>English and Japanese</li>
+    </ul>
+    <ul class="plain" lang="ja">
+      <li>回転数・車速・水温・バッテリー電圧・ブースト圧などをリアルタイム表示</li>
+      <li>複数のメーターページ。ウィジェットごとにデータ・スタイル・色・レンジを設定</li>
+      <li>ECU 情報：車両が対応している標準 OBD-II PID と通信速度を確認</li>
+      <li>カスタム PID：PID の生データから計算式で独自の値を作成</li>
+      <li>メートル法・ヤード・ポンド法・カスタムの単位設定</li>
+      <li>アダプタなしで全機能を試せるデモモード</li>
+      <li>日本語・英語に対応</li>
+    </ul>
+  </div>
+
+  <h2 id="requirements">Requirements <span class="muted" lang="ja">/ 動作環境</span></h2>
+  <div class="bi">
+    <dl class="spec">
+      <dt>iPhone</dt><dd>iOS 15 or later</dd>
+      <dt>Android</dt><dd>Android 10 or later</dd>
+      <dt>Adapter</dt><dd>ELM327-compatible OBD2 adapter with <strong>Bluetooth LE</strong> or <strong>Wi-Fi</strong></dd>
+      <dt>Vehicle</dt><dd>OBD-II compliant vehicle. Available data depends on the vehicle.</dd>
+    </dl>
+    <dl class="spec" lang="ja">
+      <dt>iPhone</dt><dd>iOS 15 以降</dd>
+      <dt>Android</dt><dd>Android 10 以降</dd>
+      <dt>アダプタ</dt><dd><strong>Bluetooth LE</strong> または <strong>Wi-Fi</strong> で接続する ELM327 互換 OBD2 アダプタ</dd>
+      <dt>車両</dt><dd>OBD-II 対応車。取得できるデータは車種によって異なります。</dd>
+    </dl>
+  </div>
+  <div class="note bi">
+    <p>Classic Bluetooth (SPP) adapters are not supported. Adapters that pair in your phone's Bluetooth settings with a PIN such as 1234 are usually classic Bluetooth. Wi-Fi adapters must use the common address 192.168.0.10, port 35000.</p>
+    <p lang="ja">クラシック Bluetooth（SPP）のアダプタには対応していません。スマートフォンの Bluetooth 設定で PIN（1234 など）を入れてペアリングするタイプは、たいていクラシック Bluetooth です。Wi-Fi アダプタは、一般的な 192.168.0.10（ポート 35000）で待ち受けるものに対応しています。</p>
+  </div>
+
+  <h2 id="try">Try before you buy <span class="muted" lang="ja">/ ご購入の前に</span></h2>
+  <div class="bi">
+    <div>
+      <p>The free plan includes the basic meter display, up to 2 meter pages and up to 2 widgets per page, with ads. Please check that your adapter and vehicle work on the free plan before purchasing.</p>
+      <p>No adapter yet? Demo Mode shows every feature with simulated data. Turn it on in Settings → Demo &amp; Support → Demo Mode, or tap Start Demo Mode on the ELM screen. It turns off automatically when you connect a real adapter.</p>
+    </div>
+    <div lang="ja">
+      <p>無料プランでは、基本のメーター表示、メーターページ 2 枚まで、1 ページあたりウィジェット 2 個までをご利用いただけます（広告表示あり）。ご購入の前に、無料プランでお使いのアダプタと車両の動作をご確認ください。</p>
+      <p>アダプタがまだない場合は、デモモードで全機能を模擬データでお試しいただけます。設定 → デモ・サポート → デモモード、または ELM 画面の「デモモードを開始」から有効にできます。実際のアダプタに接続すると自動で終了します。</p>
+    </div>
+  </div>
+
+  <h2 id="premium">Premium <span class="muted" lang="ja">/ プレミアム</span></h2>
+  <div class="bi">
+    <div>
+      <ul class="plain">
+        <li>Hide ads completely</li>
+        <li>Permanent Custom PID unlock</li>
+        <li>Unlimited widget pages</li>
+        <li>Unlimited widgets per page</li>
+        <li>Import / Export</li>
+        <li>Support development</li>
+      </ul>
+      <p>Choose Monthly, Yearly or Lifetime. All three include the same benefits. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period, and can be managed in your App Store or Google Play account settings. Lifetime is a one-time purchase and does not renew.</p>
+    </div>
+    <div lang="ja">
+      <ul class="plain">
+        <li>広告を完全非表示</li>
+        <li>Custom PID 永続アンロック</li>
+        <li>ウィジェットページ無制限</li>
+        <li>ページあたりウィジェット無制限</li>
+        <li>Import / Export 機能</li>
+        <li>開発をサポート</li>
+      </ul>
+      <p>月額・年額・買い切りから選べます。特典はどれも同じです。サブスクリプションは、期間終了の 24 時間以上前に解約しない限り自動更新され、App Store または Google Play のアカウント設定から管理できます。買い切りは一度だけの購入で、自動更新はありません。</p>
+    </div>
+  </div>
+
+  <h2 id="support">Support <span class="muted" lang="ja">/ サポート</span></h2>
+
+  <details>
+    <summary>The adapter doesn't appear when I scan <span class="muted" lang="ja">/ スキャンしてもアダプタが表示されない</span></summary>
+    <div class="bi">
+      <ul class="plain">
+        <li>Check that it is a Bluetooth LE or Wi-Fi adapter (see Requirements).</li>
+        <li>Turn the ignition on so the adapter has power.</li>
+        <li>Allow Bluetooth access. iPhone: Settings → Motroxia → Bluetooth. Android 12 and later: allow Nearby devices. Android 10 and 11: allow Location, which Android requires for Bluetooth scanning.</li>
+        <li>For a Wi-Fi adapter, first join its Wi-Fi network in your phone's settings. On iPhone, also allow Local Network access.</li>
+      </ul>
+      <ul class="plain" lang="ja">
+        <li>Bluetooth LE または Wi-Fi のアダプタかご確認ください（動作環境を参照）。</li>
+        <li>アダプタに電源が入るよう、イグニッションをオンにしてください。</li>
+        <li>Bluetooth を許可してください。iPhone：設定 → Motroxia → Bluetooth。Android 12 以降：「付近のデバイス」を許可。Android 10・11：Bluetooth のスキャンに Android が要求するため「位置情報」を許可。</li>
+        <li>Wi-Fi アダプタの場合は、先にスマートフォンの設定でアダプタの Wi-Fi に接続してください。iPhone では「ローカルネットワーク」も許可してください。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>Connected, but some gauges show no value <span class="muted" lang="ja">/ 接続できたが、一部のメーターに値が出ない</span></summary>
+    <div class="bi">
+      <p>Available data depends on the vehicle. Open the ECU screen to see which PIDs your car supports, and use those for your gauges.</p>
+      <p lang="ja">取得できるデータは車種によって異なります。ECU 画面で車両が対応している PID を確認し、その中からメーターに割り当ててください。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Restore a purchase on a new phone <span class="muted" lang="ja">/ 機種変更後に購入を復元したい</span></summary>
+    <div class="bi">
+      <p>Purchases are usually restored when the app starts. If not, tap Premium on the home screen, then Restore Purchase. If a checklist appears first, tap “No adapter yet? View plans”. Use the same Apple ID or Google account you purchased with.</p>
+      <p lang="ja">通常はアプリの起動時に復元されます。復元されない場合は、ホーム画面の「プレミアム」から「購入を復元」をタップしてください。先に確認画面が表示された場合は「アダプタなしでプランを見る」をタップします。購入時と同じ Apple ID / Google アカウントをお使いください。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Cancel a subscription <span class="muted" lang="ja">/ サブスクリプションを解約したい</span></summary>
+    <div class="bi">
+      <p>Tap Manage Subscriptions on the Premium screen, or cancel in the store. iPhone: Settings → your name → Subscriptions. Android: Google Play → profile icon → Payments &amp; subscriptions → Subscriptions. Deleting the app does not cancel a subscription.</p>
+      <p lang="ja">プレミアム画面の「サブスクを管理」、またはストアから解約できます。iPhone：設定 → ユーザ名 → サブスクリプション。Android：Google Play → プロフィールアイコン → お支払いと定期購入 → 定期購入。アプリを削除しても解約にはなりません。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>I bought Lifetime while subscribed <span class="muted" lang="ja">/ サブスク中に買い切りを購入した</span></summary>
+    <div class="bi">
+      <p>Lifetime already includes every benefit. Cancel the subscription in your store settings to stop further charges.</p>
+      <p lang="ja">買い切りですべての特典が有効になります。追加の請求を止めるため、ストアの設定でサブスクリプションを解約してください。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Refunds <span class="muted" lang="ja">/ 返金について</span></summary>
+    <div class="bi">
+      <p>Refunds are handled by Apple or Google under their own policies, and we cannot issue them directly. App Store: <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>. Google Play: <a href="https://support.google.com/googleplay/answer/2479637">Google Play Help</a>.</p>
+      <p lang="ja">返金は Apple または Google が各社のポリシーに基づいて対応するため、開発者から直接返金することはできません。App Store：<a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>。Google Play：<a href="https://support.google.com/googleplay/answer/2479637?hl=ja">Google Play ヘルプ</a>。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Change ad consent <span class="muted" lang="ja">/ 広告の同意設定を変更したい</span></summary>
+    <div class="bi">
+      <p>Open Settings → Privacy Options. This item appears only in regions where consent is required.</p>
+      <p lang="ja">設定 → プライバシー設定 から変更できます。同意が必要な地域でのみ表示されます。</p>
+    </div>
+  </details>
+
+  <h2 id="contact">Contact <span class="muted" lang="ja">/ お問い合わせ</span></h2>
+  <div class="bi">
+    <div>
+      <p>Email: <a href="mailto:hdbenchnet@gmail.com?subject=Motroxia">hdbenchnet@gmail.com</a></p>
+      <p>To help us investigate, please include the app version, your phone model and OS version, the adapter name and connection type (Bluetooth LE or Wi-Fi), and your car's make, model and year. English or Japanese is fine.</p>
+    </div>
+    <div lang="ja">
+      <p>メール：<a href="mailto:hdbenchnet@gmail.com?subject=Motroxia">hdbenchnet@gmail.com</a></p>
+      <p>調査のため、アプリのバージョン、スマートフォンの機種と OS バージョン、アダプタの製品名と接続方式（Bluetooth LE / Wi-Fi）、車種と年式をお知らせください。日本語・英語どちらでも構いません。</p>
+    </div>
+  </div>
+
+  <h2 id="legal">Legal <span class="muted" lang="ja">/ 規約</span></h2>
+  <div class="links">
+    <a class="btn" href="https://hdbench.github.io/motroxia-privacy/">Privacy Policy / プライバシーポリシー</a>
+    <a class="btn" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (App Store) / 利用規約</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2001-2026 HDBENCH.NET</span>
+    <span><a href="../">HDBENCH.NET</a> · <a href="https://www.hdbench.net/">www.hdbench.net</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

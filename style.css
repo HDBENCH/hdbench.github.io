@@ -1,0 +1,112 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #6e6e73;
+  --line: #d9d9de;
+  --card: #f5f5f7;
+  --link: #0a66c2;
+  --accent: #0a7a4a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f10;
+    --fg: #f5f5f7;
+    --muted: #a1a1a6;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #4da3ff;
+    --accent: #00ff88;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.7 system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", Meiryo, sans-serif;
+}
+img { max-width: 100%; }
+a { color: var(--link); }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+.wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+.site-header { border-bottom: 1px solid var(--line); }
+.site-header .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding-top: 14px; padding-bottom: 14px;
+}
+.brand { font-weight: 700; letter-spacing: .02em; color: var(--fg); text-decoration: none; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14px; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--fg); }
+
+main { padding: 32px 0 48px; }
+h1 { font-size: 30px; line-height: 1.3; margin: 0 0 8px; }
+h2 { font-size: 20px; line-height: 1.4; margin: 40px 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+h2 .muted { font-weight: 400; }
+h3 { font-size: 17px; line-height: 1.4; margin: 0; }
+p { margin: 0 0 12px; }
+.muted { color: var(--muted); }
+
+/* 英日を並べる。狭い画面では縦に積む */
+.bi { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; margin: 0 0 14px; }
+.bi > * { min-width: 0; }
+.bi > p { margin: 0; }
+@media (max-width: 640px) { .bi { grid-template-columns: 1fr; } }
+.bi.lead { color: var(--muted); margin-bottom: 24px; }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin: 0 0 14px; }
+.card .bi { margin: 12px 0 0; }
+.card-head { display: flex; align-items: center; gap: 14px; }
+.card-head img { width: 48px; height: 48px; border-radius: 11px; flex: none; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 0; padding: 0; list-style: none; }
+.tags li { font-size: 12px; line-height: 1; padding: 5px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.btn {
+  display: inline-block; font-size: 14px; font-weight: 600; line-height: 1.4; text-decoration: none;
+  padding: 8px 14px; border-radius: 8px; border: 1px solid var(--line); color: var(--fg); background: var(--bg);
+}
+.btn:hover { border-color: var(--muted); }
+.btn.primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+ul.plain { padding-left: 1.2em; margin: 0; }
+ul.plain li { margin-bottom: 4px; }
+
+dl.spec { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; }
+dl.spec dt { color: var(--muted); }
+dl.spec dd { margin: 0; }
+
+.note { border-left: 3px solid var(--accent); padding: 10px 14px; background: var(--card); border-radius: 0 8px 8px 0; margin: 14px 0; }
+
+details { border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; margin: 0 0 10px; background: var(--card); }
+details summary { cursor: pointer; font-weight: 600; }
+details[open] summary { margin-bottom: 8px; }
+details .bi { margin: 0; }
+
+/* アプリページ先頭の帯。色は各アプリの index.html で --app-* 変数として指定する。
+   指定しなければシリーズの配色（黒地に #00FF88）になる。
+   文字は白系で固定なので、--app-hero-bg には暗い色を指定すること */
+.hero { background: var(--app-hero-bg, #000000); color: #f5f5f7; border-radius: 16px; padding: 28px 24px; }
+.hero .card-head img { width: 72px; height: 72px; border-radius: 16px; }
+.hero h1 { color: #ffffff; margin: 0; }
+.hero .tagline { color: var(--app-accent, #00ff88); font-weight: 600; margin: 0; }
+.hero .bi { margin: 18px 0 0; color: #d1d1d6; }
+.hero .btn { background: #1c1c1e; color: #ffffff; border-color: #3a3a3c; }
+.hero .btn.primary { background: var(--app-accent, #00ff88); color: var(--app-accent-ink, #000000); border-color: var(--app-accent, #00ff88); }
+
+.site-footer { border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+.site-footer .wrap { padding-top: 20px; padding-bottom: 28px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+.site-footer a { color: var(--muted); }
+
+/* スマートフォン: ヘッダーのリンクを2行目に回し、英日を縦に積んだときの間隔を広げる */
+@media (max-width: 640px) {
+  .site-header .wrap { flex-wrap: wrap; row-gap: 6px; }
+  .site-nav { width: 100%; }
+  .bi { row-gap: 18px; }
+  h1 { font-size: 26px; }
+}
